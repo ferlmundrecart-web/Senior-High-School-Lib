@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senior High School Library</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family: Arial, sans-serif;}
+body{background:#f4f6f9;color:#333;}
+header{
+    background:#0b3c5d;color:white;padding:15px 40px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+    position: sticky; top:0; z-index: 1000;
+}
+header h1{font-size:20px;}
+nav a{color:white;margin-left:20px;text-decoration:none;font-weight:bold;cursor:pointer;}
+nav a:hover{text-decoration:underline;}
+.hero{background:linear-gradient(to right,#0b3c5d,#1e90ff);color:white;padding:80px 20px;text-align:center;}
+.hero h2{font-size:40px;}
+.hero p{font-size:18px;margin-top:10px;}
+.section{padding:50px 20px;max-width:1000px;margin:auto; display:none;}
+.section h2{font-size:30px;text-align:center;margin-bottom:20px;}
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:20px;}
+.card{background:white;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);}
+.card h3{margin-bottom:10px;color:#0b3c5d;font-size:18px;}
+.card p{font-size:14px;color:#333;}
+footer{background:#222;color:white;text-align:center;padding:15px;margin-top:40px;}
+ul{list-style:none;padding:0;margin:0;}
+ul li a.active{background:#1e90ff;}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>San Pedro College</h1>
+    <h2>Learning Resource Center</h2>
+    <nav>
+        <a id="home-nav">Home</a>
+        <a id="about-nav">About</a>
+        <a id="services-nav">Services</a>
+        <a id="facilities-nav">Facilities</a>
+        <a id="faqs-nav">FAQs</a>
+        <a id="contact-nav">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <h2>Welcome to Senior High School Library</h2>
+    <p>"Courteous & Joyful Services"</p>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+    <h2>About Learning Resource Center</h2>
+    <div style="display:flex; gap:20px;">
+        <!-- Vertical Submenu -->
+        <div id="about-menu" style="flex:0 0 200px;">
+            <ul>
+                <li><a href="#" data-index="0">Strategic Framework</a></li>
+                <li><a href="#" data-index="1">Our Vision</a></li>
+                <li><a href="#" data-index="2">Our Mission</a></li>
+                <li><a href="#" data-index="3">Our Goal</a></li>
+            </ul>
+        </div>
+        <!-- Content -->
+        <div id="about-content" style="flex:1;background:white;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+    <h2>Library Services Offered</h2>
+    <div style="display:flex; gap:20px;">
+        <!-- Vertical Submenu -->
+        <div id="services-menu" style="flex:0 0 200px;">
+            <ul id="services-list">
+                <li><a href="#" data-index="0">Book Borrowing Service</a></li>
+                <li><a href="#" data-index="1">Online & Face-to-Face Queries</a></li>
+                <li><a href="#" data-index="2">Books & Articles Request / Digitization</a></li>
+                <li><a href="#" data-index="3">Online Document Delivery</a></li>
+                <li><a href="#" data-index="4">Access to Databases</a></li>
+                <li><a href="#" data-index="5">Related Literature Search</a></li>
+                <li><a href="#" data-index="6">Web OPAC</a></li>
+            </ul>
+        </div>
+        <!-- Content -->
+        <div id="services-content" style="flex:1;background:white;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="section" id="facilities">
+    <h2>Library Areas & Facilities</h2>
+    <div style="display:flex; gap:20px;">
+        <!-- Vertical Submenu -->
+        <div id="facilities-menu" style="flex:0 0 200px;">
+            <ul id="facilities-list">
+                <li><a href="#" data-index="0">Baggage Counter</a></li>
+                <li><a href="#" data-index="1">Information Desk / Borrowing & Returning</a></li>
+                <li><a href="#" data-index="2">Reading Area</a></li>
+                <li><a href="#" data-index="3">Stack Room</a></li>
+                <li><a href="#" data-index="4">Restroom</a></li>
+                <li><a href="#" data-index="5">Senior High School Collection</a></li>
+                <li><a href="#" data-index="6">SmartLib Attendance System</a></li>
+                <li><a href="#" data-index="7">RFID Security Gate</a></li>
+            </ul>
+        </div>
+        <!-- Content -->
+        <div id="facilities-content" style="flex:1;background:white;padding:20px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
+
+<!-- FAQs -->
+<section class="section" id="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <div id="faqs-list"></div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email Us: lrc@spcdavao.edu.ph<br>
+       Contact Us: (082)-221-0634 Local 1516 - 5F Info. Desk<br>
+       Connect with Us in Facebook: SPC Learning Resource Center</p>
+</section>
+
+<footer>
+    <p>© 2026 Senior High School Library | All Rights Reserved</p>
+</footer>
+
+<script>
+// Data
+const aboutData = [
+{title: "Learning Resource Center Strategic Framework",
+description: `The Learning Resource Center is an academic support service and an educational resource center showing the love of compassionate Jesus, healer and teacher, envisioning becoming a moving force for excellent customer care and service with joy and courtesy.
+It aims to provide relevant and accurate information and resources responsive to the educational, research, cultural, vocational, and recreational needs of the SPC community; support academic programs through collection development, circulation, reference, reserve and learning commons; establish partnerships with local, national, and international libraries; maintain memberships in associations; provide adequate support materials in various formats; and set up a separate library for each department.`},
+{title:"Our Vision", description:"A service and resource center manifesting the love of the compassionate Jesus."},
+{title:"Our Mission", description:"To serve as an integral part of the educational program of the college through facilitating and improving learning in all instructional areas."},
+{title:"Our Goal", description:"To provide information and bibliographic resources responsive to educational, research, and recreational needs of the SPC community."}
+];
+
+const servicesData = [
+{title:"📚 Book Borrowing Service", description:"Students and teachers may borrow library books for academic and research purposes."},
+{title:"💬 Online and Face-to-Face Queries & Assistance", description:"Library staff assist users with research questions and information needs."},
+{title:"📖 Books and Articles Request / Book Digitization", description:"Request books and articles, and digitized copies for academic use."},
+{title:"📩 Online Document Delivery", description:"Electronic delivery of requested academic documents and materials."},
+{title:"🗄️ Access to Databases", description:"Access to academic and research databases for students and faculty."},
+{title:"🔍 Related Literature Search", description:"Assistance in finding research literature and academic references."},
+{title:"💻 Web OPAC (Online Public Access Catalog)", description:"Search books and library materials through the online catalog system."}
+];
+
+const facilitiesData = [
+{title:"🛄 Baggage Counter", description:"Secure your bags before entering the library for a comfortable visit."},
+{title:"ℹ️ Information Desk / Borrowing & Returning Desk", description:"Assistance with inquiries, borrowing, and returning books efficiently."},
+{title:"📖 Reading Area", description:"Quiet space for reading, studying, and research."},
+{title:"📚 Stack Room", description:"Storage area for books and reference materials."},
+{title:"🚻 Restroom", description:"Clean and accessible facilities for library visitors."},
+{title:"🎓 Senior High School Collection", description:"Dedicated resources and books specifically for Senior High School students."},
+{title:"💻 SmartLib Attendance System", description:"Monitor and record student library visits digitally for efficient tracking."},
+{title:"🔒 RFID Security Gate", description:"Ensures the security of library materials with advanced RFID technology."}
+];
+
+const faqsData = [
+{question: "What are the LRC opening hours?",
+ answer: `Monday to Saturday: 7:00 AM - 7:30 PM (Onsite & Online)
+Summer Break:8:00 AM - 12:00 NN, 1:00 PM - 5:00 PM
+During Sundays and Holidays, the LRC is closed. Changes in the regular schedules are posted as necessary.`},
+{question: "How can I request for online resources?",
+ answer: "To request online resources, simply message us on our Google Chat account: lrc@spcdavao.edu.ph. Please provide a copy of your validated SPC ID or SRF. If you need assistance, feel free to visit the LRC, where our staff will be happy to help."},
+{question: "Can I have the complete digitized copy of the book?",
+ answer: "The SPC LRC follows copyright law and can only provide up to 10% of a book's content in digitized form. The materials are accessible via Google Drive for online reading only and cannot be downloaded or printed. Please note that the digitized materials will display SPC's stamp of ownership, and sharing or distributing them may lead to legal consequences."},
+{question: "Can I access the library remotely?",
+ answer: "Yes, you can access the online catalog and digital resources from home."}
+];
+
+// Sections
+const sections = {
+    home: document.getElementById("home"),
+    about: document.getElementById("about"),
+    services: document.getElementById("services"),
+    facilities: document.getElementById("facilities"),
+    faqs: document.getElementById("faqs"),
+    contact: document.getElementById("contact")
+};
+
+// Navbar events
+document.getElementById("home-nav").addEventListener("click", ()=>showSection("home"));
+document.getElementById("about-nav").addEventListener("click", ()=>showSection("about"));
+document.getElementById("services-nav").addEventListener("click", ()=>showSection("services"));
+document.getElementById("facilities-nav").addEventListener("click", ()=>showSection("facilities"));
+document.getElementById("faqs-nav").addEventListener("click", ()=>showSection("faqs"));
+document.getElementById("contact-nav").addEventListener("click", ()=>showSection("contact"));
+
+// Show section
+function showSection(section){
+    for(let key in sections){ sections[key].style.display="none"; }
+    sections[section].style.display="block";
+    window.scrollTo({top:0, behavior:"smooth"});
+}
+
+// Show home by default
+showSection("home");
+
+// ----- About Submenu -----
+const aboutContent = document.getElementById("about-content");
+aboutContent.innerHTML = `<h3>${aboutData[0].title}</h3><p>${aboutData[0].description}</p>`;
+document.querySelectorAll("#about-menu a").forEach(link=>{
+    link.addEventListener("click", e=>{
+        e.preventDefault();
+        const index = link.dataset.index;
+        aboutContent.innerHTML = `<h3>${aboutData[index].title}</h3><p>${aboutData[index].description}</p>`;
+        setActive("#about-menu a", link);
+    });
+});
+
+// ----- Services Submenu -----
+const servicesContent = document.getElementById("services-content");
+servicesContent.innerHTML = `<h3>${servicesData[0].title}</h3><p>${servicesData[0].description}</p>`;
+document.querySelectorAll("#services-menu a").forEach(link=>{
+    link.addEventListener("click", e=>{
+        e.preventDefault();
+        const index = link.dataset.index;
+        servicesContent.innerHTML = `<h3>${servicesData[index].title}</h3><p>${servicesData[index].description}</p>`;
+        setActive("#services-menu a", link);
+    });
+});
+
+// ----- Facilities Submenu -----
+const facilitiesContent = document.getElementById("facilities-content");
+facilitiesContent.innerHTML = `<h3>${facilitiesData[0].title}</h3><p>${facilitiesData[0].description}</p>`;
+document.querySelectorAll("#facilities-menu a").forEach(link=>{
+    link.addEventListener("click", e=>{
+        e.preventDefault();
+        const index = link.dataset.index;
+        facilitiesContent.innerHTML = `<h3>${facilitiesData[index].title}</h3><p>${facilitiesData[index].description}</p>`;
+        setActive("#facilities-menu a", link);
+    });
+});
+
+// Helper to highlight active submenu
+function setActive(selector, activeLink){
+    document.querySelectorAll(selector).forEach(a=>a.classList.remove("active"));
+    activeLink.classList.add("active");
+}
+
+// ----- FAQs -----
+const faqsList = document.getElementById("faqs-list");
+faqsData.forEach(f=>{
+    const container = document.createElement("div"); container.style.marginBottom="15px";
+    const question = document.createElement("h3"); question.innerText="❓ "+f.question; question.style.cursor="pointer"; question.style.color="#0b3c5d";
+    const answer = document.createElement("p"); answer.innerText=f.answer; answer.style.display="none"; answer.style.paddingLeft="10px";
+    question.addEventListener("click", ()=>{ answer.style.display = answer.style.display==="none"?"block":"none"; });
+    container.appendChild(question); container.appendChild(answer);
+    faqsList.appendChild(container);
+});
+</script>
+</body>
+</html>
